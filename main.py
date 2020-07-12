@@ -29,7 +29,7 @@ def main():
         sys.exit('Error: Folder with files does not exist')
 
 
-    # Check if size of names and files is queal
+    # Check if size of names and files is equal
     if use_names:
       if (len(names) != len(files)):
           sys.exit('Error: The number of names does not match the number of files')
