@@ -4,7 +4,7 @@ import re
 
 
 def main():
-    directory = os.path.abspath('') # Path to a directory with files
+    directory = os.path.abspath('') # Path to the directory with files
     use_names = True # Use predefined names or regexps(line 44)
     names = [] # List of names
     files = [] # List of files
