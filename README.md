@@ -2,7 +2,7 @@
 
 Python script for renaming files by given names or regular expression. Originally written to rename episodes of serials/cartoons but can be easily changed for any purpose.
 
-![Renamer screenshot](https://habrastorage.org/webt/zf/4o/3u/zf4o3udqbsf3tatcuwoxybl9kae.png)
+![Renamer screenshot](https://habrastorage.org/webt/ju/ub/l9/juubl9xg6hrqffbg3gyrdhum1oy.png)
 
 
 ## 📦 Requirements
