@@ -5,20 +5,31 @@ Python script for renaming files by given names or regular expression. Originall
 ![Renamer screenshot](https://habrastorage.org/webt/zf/4o/3u/zf4o3udqbsf3tatcuwoxybl9kae.png)
 
 
-## Requirements
+## 📦 Requirements
 * python 3.6+
 
 
-## Getting Started
+## 🚀 Usage
 0. Download [script](https://raw.githubusercontent.com/alsolovyev/renamer/master/main.py)
-1. Specify the directory with files
-2. Specify files extension
-3. Add desired names
-4. Run the script `python main.py`
+1. Run the script
+```
+python main.py -d "~/Movies/According to Jim" -e mkv
+```
+
+
+## Options
+```
+-h, --help            show this help message and exit
+-d DIRECTORY, --directory DIRECTORY
+                      path to the directory with files
+-e EXTENSION, --extension EXTENSION
+                      files extension for search
+-r, --regex           use regular expressions
+```
 
 
 ## Task list
-- [ ] Add arguments for easy use
+- [x] ~~Add arguments for easy use~~
 
 
 ## Authors
