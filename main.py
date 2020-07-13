@@ -1,14 +1,25 @@
 import os
 import sys
 import re
+import argparse
+
+
+argsParser = argparse.ArgumentParser(
+  formatter_class=argparse.RawTextHelpFormatter,
+  description='Python script for renaming files by given names or regular expression',
+)
+argsParser.add_argument('-d', '--directory', action='store', default='', help='path to the directory with files')
+argsParser.add_argument('-e', '--extension', action='store', default='', help='files extension for search')
+argsParser.add_argument('-r', '--regex', action='store_true', help='use regular expressions')
+args = argsParser.parse_args()
 
 
 def main():
-    directory = os.path.abspath('') # Path to the directory with files
-    use_names = True # Use predefined names or regexps(line 44)
+    directory = os.path.abspath(args.directory) # Path to the directory with files
+    use_names = not args.regex # Use predefined names or regexes(line 44)
     names = [] # List of names
     files = [] # List of files
-    extension = '' # Files extension for search
+    extension = args.extension # Files extension for search
 
 
     # Get names
