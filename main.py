@@ -40,6 +40,13 @@ def main():
         sys.exit('Error: Folder with files does not exist')
 
 
+    # Check the number of files
+    if len(files) == 0:
+      sys.exit(f"""Error: There is nothing to rename. Change directory or specify files extension
+       Current directory: '{directory}'
+       Current extension: '{extension}'""")
+
+
     # Check if size of names and files is equal
     if use_names:
       if (len(names) != len(files)):
