@@ -11,7 +11,8 @@ Python script for renaming files by given names or regular expression. Originall
 
 ## 🚀 Usage
 0. Download [script](https://raw.githubusercontent.com/alsolovyev/renamer/master/main.py)
-1. Run the script
+1. Add list of names
+2. Run the script
 ```
 python main.py -d "~/Movies/According to Jim" -e mkv
 ```
