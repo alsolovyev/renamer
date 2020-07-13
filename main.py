@@ -26,7 +26,7 @@ def main():
     if use_names:
       try:
           with open(os.path.join(os.getcwd(), 'names')) as f:
-              names = [name.strip() for name in f.readlines()]
+              names = list(filter(None, [name.strip() for name in f.readlines()]))
       except FileNotFoundError:
         sys.exit('Error: File with names does not exist')
 
