@@ -16,7 +16,7 @@ args = argsParser.parse_args()
 
 def main():
     directory = os.path.abspath(args.directory) # Path to the directory with files
-    use_names = not args.regex # Use predefined names or regexes(line 44)
+    use_names = not args.regex # Use predefined names or regexes(line 62)
     names = [] # List of names
     files = [] # List of files
     extension = args.extension # Files extension for search
