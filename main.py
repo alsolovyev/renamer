@@ -47,10 +47,10 @@ def main():
        Current extension: '{extension}'""")
 
 
-    # Check if size of names and files is equal
+    # Compare the number of files and names
     if use_names:
       if (len(names) != len(files)):
-          sys.exit('Error: The number of names does not match the number of files')
+          sys.exit(f'Error: The number of names does not match the number of files({len(files)}/{len(names)})')
 
 
     # Rename files
