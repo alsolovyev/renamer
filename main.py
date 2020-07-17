@@ -5,8 +5,8 @@ import argparse
 
 
 argsParser = argparse.ArgumentParser(
-  formatter_class=argparse.RawTextHelpFormatter,
-  description='Python script for renaming files by given names or regular expression',
+    formatter_class=argparse.RawTextHelpFormatter,
+    description='Python script for renaming files by given names or regular expression',
 )
 argsParser.add_argument('-d', '--directory', action='store', default='', help='path to the directory with files')
 argsParser.add_argument('-e', '--extension', action='store', default='', help='files extension for search')
@@ -24,11 +24,11 @@ def main():
 
     # Get names
     if use_names:
-      try:
-          with open(os.path.join(os.getcwd(), 'names')) as f:
-              names = list(filter(None, [name.strip() for name in f.readlines()]))
-      except FileNotFoundError:
-        sys.exit('Error: File with names does not exist')
+        try:
+            with open(os.path.join(os.getcwd(), 'names')) as f:
+                names = list(filter(None, [name.strip() for name in f.readlines()]))
+        except FileNotFoundError:
+            sys.exit('Error: File with names does not exist')
 
 
     # Get files
@@ -42,24 +42,24 @@ def main():
 
     # Check the number of files
     if len(files) == 0:
-      sys.exit(f"""Error: There is nothing to rename. Change directory or specify files extension
+        sys.exit(f"""Error: There is nothing to rename. Change directory or specify files extension
        Current directory: '{directory}'
        Current extension: '{extension}'""")
 
 
     # Compare the number of files and names
     if use_names:
-      if (len(names) != len(files)):
-          sys.exit(f'Error: The number of names does not match the number of files({len(files)}/{len(names)})')
+        if (len(names) != len(files)):
+            sys.exit(f'Error: The number of names does not match the number of files({len(files)}/{len(names)})')
 
 
     # Rename files
     for i in range(len(files)):
         if use_names:
-          new_name = f'{i + 1:02d} - {names[i]}.{extension}'
+            new_name = f'{i + 1:02d} - {names[i]}.{extension}'
         else:
-          # Add your regex patterns here
-          new_name = re.sub(r'', '', files[i])
+            # Add your regex patterns here
+            new_name = re.sub(r'', '', files[i])
 
         old_file = os.path.join(directory, files[i])
         new_file = os.path.join(directory, new_name)
