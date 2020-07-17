@@ -56,7 +56,8 @@ def main():
     # Rename files
     for i in range(len(files)):
         if use_names:
-            new_name = f'{i + 1:02d} - {names[i]}.{extension}'
+            index = f'{i + 1:02d}' if len(files) >= 10 else i + 1
+            new_name = f'{index} - {names[i]}.{extension}'
         else:
             # Add your regex patterns here
             new_name = re.sub(r'', '', files[i])
